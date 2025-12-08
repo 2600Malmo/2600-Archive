@@ -4,7 +4,7 @@ layout: default
 
 ## December 2025
 
-- [@Mattias](https://www.linkedin.com/in/mattias-jacobsson-ba99b3306/) presented about his CDXE project "Kryptogram"
+- [@Mattias](https://www.linkedin.com/in/mattias-jacobsson-ba99b3306/) presented on his project [CDXE](https://kryptogram.se/cdxe)
 - [@Ian](https://github.com/milkmansson) presented on the topic "OT Security".
 >[Slides](https://docs.google.com/presentation/d/1KlaIcqSO5uCAulA2LWR2v78hGBXef4g6bLhWzqxLx1c/edit?usp=sharing)
 
