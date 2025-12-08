@@ -8,8 +8,9 @@ Meetings are open to anyone of any age or level of expertise.
 Join us on our next meeting on the first Friday of the month at Foo Café!
 We don't have any entrance fee but have free beer and pizza!
 
-17:00-20:00
-Carlsgatan 12a, Malmö, Sweden
+- [FooCafé](https://foocafe.org/)
+- 17:00-20:00
+- Carlsgatan 12a, Malmö, Sweden
 
 ## Stay in touch
 Our socials:
