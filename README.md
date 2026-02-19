@@ -4,7 +4,8 @@
 Meetings are open to anyone of any age or level of expertise.
 
 ## Next meeting
-> *TBD*  
+*TBD*  
+
 What's next? We are trying to figure this out!  
 Historically, most of our meetings took place at FooCafé:  
 - [FooCafé](https://foocafe.org/)
