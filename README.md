@@ -4,11 +4,12 @@
 Meetings are open to anyone of any age or level of expertise.
 
 ## Next meeting
-> TBD  
+> *TBD*  
 What's next? We are trying to figure this out!  
-Historically, most of our meetings took place at Foo Cafe:  
+Historically, most of our meetings took place at FooCafé:  
 - [FooCafé](https://foocafe.org/)
-- Carlsgatan 12a, Malmö, Sweden
+- Carlsgatan 12a, Malmö, Sweden. 
+
 Unfortunately, our venue is closing down at the end of February 2026 ([related news](https://www.goto10.se/goto-10-stanger/)), and we are looking for the new place and format at the moment.  
 If you have a suggestion about the new home for our community - please reach out in any of the socials below. 
 
