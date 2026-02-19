@@ -4,6 +4,8 @@ layout: default
 
 ## February 2026
 
-- We are looking for speakers. Want to present? Reach out by your favorite communication platform listed on the [main page](/)
+- Nyastrid presented about `Web Application Security: Everything & Nothing Has Changed`.  
+
+## Make a Pull Request if you want your slides to be here!
 
 [back](/)

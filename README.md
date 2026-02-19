@@ -4,13 +4,13 @@
 Meetings are open to anyone of any age or level of expertise.
 
 ## Next meeting
-
-Join us on our next meeting on the first Friday of the month at Foo Café!
-We don't have any entrance fee but have free beer and pizza!
-
+> TBD  
+What's next? We are trying to figure this out!  
+Historically, most of our meetings took place at Foo Cafe:  
 - [FooCafé](https://foocafe.org/)
-- 17:00-20:00
 - Carlsgatan 12a, Malmö, Sweden
+Unfortunately, our venue is closing down at the end of February 2026 ([related news](https://www.goto10.se/goto-10-stanger/)), and we are looking for the new place and format at the moment.  
+If you have a suggestion about the new home for our community - please reach out in any of the socials below. 
 
 ## Stay in touch
 Our socials:
