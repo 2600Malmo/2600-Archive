@@ -20,9 +20,6 @@ Join our socials to get the pass through the gate:
 - [Mastodon](https://mastodon.online/@2600Malmo)
 - [Twitter](https://twitter.com/2600malmo)  
 
-## Digital badge  
-If you ever gave a presentation for 2600 Malmö community you are entitled for a digital [Speaker](https://badgr.com/public/badges/S3xgCbl3R9SVH3fkkaKX9Q) badge!  
-Reach out in any of our socials to get it.
 
 ## Previous meetings 
 
@@ -30,6 +27,9 @@ Some of the meetings were streamed and recorded, for those you will find a link 
 Some of the speakers wanted make their slide deck available for public, for those you will find a link for either `.pdf`, `.pptx`, or any other format that speaker would prefer. 
 
 ### 2026  
+- [June](pages/June2026)
+- [May](pages/May2026)
+- [April](pages/April2026)
 - [March](pages/March2026)
 - [February](pages/February2026)
 - [January](pages/January2026)
