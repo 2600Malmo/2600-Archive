@@ -1,0 +1,13 @@
+WEBVTT
+
+00:00.000 --> 00:05.000
+Controlled Windows lab demonstration.
+The recording has no audio.
+
+00:05.000 --> 00:10.000
+Watch the process identity:
+NT AUTHORITY\SYSTEM.
+
+00:10.000 --> 00:15.600
+The result illustrates privileged local execution
+on the tested workstation.
