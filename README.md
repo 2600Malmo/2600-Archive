@@ -29,6 +29,7 @@ Some of the speakers wanted make their slide deck available for public, for thos
 Can't remember which month a talk was in? [Search all talks](pages/search), or browse [by speaker](pages/speakers) or [by tag](pages/tags).
 
 ### 2026  
+- [November](pages/November2026)
 - [October](pages/October2026)
 - [September](pages/September2026)
 - [August](pages/August2026)
