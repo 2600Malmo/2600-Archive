@@ -7,7 +7,7 @@ search_exclude: true
 
 ## Browse talks by speaker
 
-{% assign grouped = site.talks | group_by: "speaker" | sort: "name" %}
+{% assign grouped = site.talks | concat: site.legacy_talks | group_by: "speaker" | sort: "name" %}
 {% if grouped.size == 0 %}
 No talks recorded yet.
 {% else %}
@@ -16,7 +16,7 @@ No talks recorded yet.
 
 {% assign sorted_items = group.items | sort: "date" | reverse %}
 {% for talk in sorted_items %}
-- [{{ talk.title }}]({{ talk.url | relative_url }}) &mdash; {{ talk.month_name }}
+- [{{ talk.title }}]({{ talk.page_url | default: talk.url | relative_url }}) &mdash; {{ talk.month_name }}
 {% endfor %}
 
 {% endfor %}
