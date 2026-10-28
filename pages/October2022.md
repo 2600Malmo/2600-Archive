@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "October 2022"
 ---
 
 ## October 2022

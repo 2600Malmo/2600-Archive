@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "December 2023"
 ---
 
 ## December 2023

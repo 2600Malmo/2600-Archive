@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "February 2025"
 ---
 
 ## February 2025

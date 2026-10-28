@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "December 2021"
 ---
 
 ## December 2021

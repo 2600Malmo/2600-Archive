@@ -26,6 +26,8 @@ Join our socials to get the pass through the gate:
 Some of the meetings were streamed and recorded, for those you will find a link to YouTube video. 
 Some of the speakers wanted make their slide deck available for public, for those you will find a link for either `.pdf`, `.pptx`, or any other format that speaker would prefer. 
 
+Can't remember which month a talk was in? [Search all talks](pages/search), or browse [by speaker](pages/speakers) or [by tag](pages/tags).
+
 ### 2026  
 - [October](pages/October2026)
 - [September](pages/September2026)

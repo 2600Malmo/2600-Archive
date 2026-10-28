@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+<p><em>{{ page.month_name }}</em></p>
+
+{{ content }}
+
+{% if page.links %}
+<ul>
+{% for link in page.links %}
+  <li><a href="{{ link.url | relative_url }}">{{ link.label }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if page.tags %}
+<p>Tags:
+{% for tag in page.tags %}<a href="{{ '/pages/tags#' | append: tag | relative_url }}">#{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
+</p>
+{% endif %}
+
+<p>
+  <a href="{{ '/pages/' | append: page.month_key | relative_url }}">&laquo; Back to {{ page.month_name }}</a>
+  &middot;
+  <a href="{{ '/' | relative_url }}">Home</a>
+</p>
