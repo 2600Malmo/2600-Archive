@@ -9,4 +9,4 @@ links:
   - label: "Slides"
     url: "/slides/August2026/300 days of hacking.pptx"
 ---
-Anonymous presented on `300 days of hacking`.
+A fellow hacker presented on `300 days of hacking`.
