@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /search.json
+search_exclude: true
+---
+[
+{%- assign legacy_pages = site.pages | where_exp: "p", "p.path contains 'pages/'" -%}
+{%- assign legacy_pages = legacy_pages | where_exp: "p", "p.layout != 'month'" -%}
+{%- assign legacy_pages = legacy_pages | where_exp: "p", "p.search_exclude != true" -%}
+{%- assign combined = site.talks | concat: legacy_pages -%}
+{%- for item in combined -%}
+{
+  "title": {{ item.title | default: item.month_name | default: item.name | remove: ".md" | jsonify }},
+  "url": {{ item.url | relative_url | jsonify }},
+  "month": {{ item.month_name | default: "" | jsonify }},
+  "speaker": {{ item.speaker | default: "" | jsonify }},
+  "tags": {{ item.tags | join: " " | default: "" | jsonify }},
+  "content": {{ item.content | strip_html | strip_newlines | normalize_whitespace | truncate: 600 | jsonify }}
+}{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+]

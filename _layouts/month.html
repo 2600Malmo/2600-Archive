@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<h2>{{ page.month_name }}</h2>
+
+{{ content }}
+
+{% assign month_talks = site.talks | where: "month_key", page.month_key | sort: "date" %}
+{% if month_talks.size == 0 %}
+<p>We are brewing something cool! Stay tuned</p>
+{% else %}
+  {% for talk in month_talks %}
+<h3><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a></h3>
+
+{{ talk.content }}
+
+    {% if talk.links %}
+      {% for link in talk.links %}
+<blockquote><a href="{{ link.url | relative_url }}">{{ link.label }}</a></blockquote>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<h2>Make a Pull Request if you want your slides to be here!</h2>
+<p><a href="{{ '/' | relative_url }}">back</a></p>

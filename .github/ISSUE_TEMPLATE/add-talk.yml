@@ -1,0 +1,55 @@
+name: Add a talk recap
+description: Record a talk, workshop, or challenge from a 2600 Malmö meetup. Opens a pull request automatically - no git/markdown needed.
+title: "[Talk] "
+labels: ["add-talk"]
+body:
+  - type: input
+    id: month
+    attributes:
+      label: Month of the meetup
+      description: "e.g. October 2026"
+      placeholder: "October 2026"
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Talk title
+      placeholder: "e.g. Practical OSINT challenge"
+    validations:
+      required: true
+  - type: input
+    id: speaker
+    attributes:
+      label: Speaker name
+      placeholder: 'e.g. "Sergei" - or "A fellow hacker" to stay anonymous'
+    validations:
+      required: true
+  - type: input
+    id: speaker_url
+    attributes:
+      label: Speaker link (optional)
+      placeholder: "https://www.linkedin.com/in/..."
+    validations:
+      required: false
+  - type: input
+    id: tags
+    attributes:
+      label: Tags (optional, comma separated)
+      placeholder: "osint, workshop"
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: One or two sentences about the talk. Markdown links are fine.
+    validations:
+      required: true
+  - type: input
+    id: slides_url
+    attributes:
+      label: Slides link (optional)
+      description: A URL if slides are hosted elsewhere (Google Slides, etc). To attach a PDF/PPTX file instead, mention it here and a maintainer will add it to the pull request this issue opens.
+    validations:
+      required: false

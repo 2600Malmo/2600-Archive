@@ -1,0 +1,51 @@
+name: Add talk from issue form
+
+# Turns a submitted "Add a talk recap" issue into a pull request with a
+# ready-made _talks/*.md entry, so speakers/organizers don't need to touch
+# git or markdown to get a talk recorded.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  add-talk:
+    if: contains(github.event.issue.labels.*.name, 'add-talk')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Parse issue into a talk entry
+        id: parse
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: echo "$ISSUE_BODY" | python3 scripts/parse_talk_issue.py >> "$GITHUB_OUTPUT"
+
+      - name: Add new month page to README timeline
+        if: steps.parse.outputs.new_month_page == 'true'
+        run: python3 scripts/add_month_to_readme.py "${{ steps.parse.outputs.month }}" "${{ steps.parse.outputs.year }}"
+
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="talk/issue-${{ github.event.issue.number }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add _talks pages README.md
+          git commit -m "Add talk: ${{ steps.parse.outputs.title }} (${{ steps.parse.outputs.month_name }})"
+          git push origin "$BRANCH"
+          PR_URL=$(gh pr create \
+            --title "Add talk: ${{ steps.parse.outputs.title }}" \
+            --body "Closes #${{ github.event.issue.number }}
+
+          Opened automatically from the issue form. Please review before merging - especially if slides still need to be attached." \
+            --base main --head "$BRANCH")
+          gh issue comment "${{ github.event.issue.number }}" --body "Thanks! Opened $PR_URL - a maintainer will review it."

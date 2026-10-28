@@ -1,0 +1,77 @@
+name: Create next month's recap stub
+
+# Opens a PR with a blank pages/<Month><Year>.md for the month that just
+# started (plus the matching README link), so nobody has to remember to
+# create it by hand after a meetup. Maintainers/speakers just need to fill
+# in the content once a talk happens - see .github/ISSUE_TEMPLATE/add-talk.yml
+# for a no-git-required way to do that.
+
+on:
+  schedule:
+    - cron: "0 6 1 * *" # 06:00 UTC on the 1st of every month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-stub:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compute month/year
+        id: month
+        run: |
+          MONTH_NAME=$(date -u +%B)
+          YEAR=$(date -u +%Y)
+          {
+            echo "name=${MONTH_NAME}"
+            echo "year=${YEAR}"
+            echo "key=${MONTH_NAME}${YEAR}"
+            echo "label=${MONTH_NAME} ${YEAR}"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Check if page already exists
+        id: check
+        run: |
+          if [ -f "pages/${{ steps.month.outputs.key }}.md" ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create month stub page
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          cat > "pages/${{ steps.month.outputs.key }}.md" << PAGE_EOF
+          ---
+          layout: month
+          month_key: "${{ steps.month.outputs.key }}"
+          month_name: "${{ steps.month.outputs.label }}"
+          title: "${{ steps.month.outputs.label }}"
+          ---
+          PAGE_EOF
+
+      - name: Add page to README timeline
+        if: steps.check.outputs.exists == 'false'
+        run: python3 scripts/add_month_to_readme.py "${{ steps.month.outputs.name }}" "${{ steps.month.outputs.year }}"
+
+      - name: Open pull request
+        if: steps.check.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="bot/add-${{ steps.month.outputs.key }}-stub"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add "pages/${{ steps.month.outputs.key }}.md" README.md
+          git commit -m "Add ${{ steps.month.outputs.label }} recap stub"
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "Add ${{ steps.month.outputs.label }} recap stub" \
+            --body "Automated stub for this month's meetup recap. Add talks under \`_talks/${{ steps.month.outputs.key }}/\` once the meetup happens (see an existing month for the format), or use the \"Add a talk recap\" issue form." \
+            --base main --head "$BRANCH"

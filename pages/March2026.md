@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "March 2026"
 ---
 
 ## March 2026

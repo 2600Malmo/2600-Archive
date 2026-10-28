@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "April 2024"
 ---
 
 ## April 2024
