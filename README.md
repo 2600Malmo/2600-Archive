@@ -28,6 +28,9 @@ Some of the speakers wanted make their slide deck available for public, for thos
 
 ### 2026  
 - [October](pages/October2026)
+- [September](pages/September2026)
+- [August](pages/August2026)
+- [July](pages/July2026)
 - [June](pages/June2026)
 - [May](pages/May2026)
 - [April](pages/April2026)
