@@ -3,6 +3,8 @@
 2600 meetings exist as a forum for all interested in technology to meet and talk about events in technology-land, learn and teach. 
 Meetings are open to anyone of any age or level of expertise.
 
+Adding or correcting a talk? See the [contribution guide](CONTRIBUTING.md). All talk descriptions, for every year, live in `_talks/`.
+
 ## Next meeting
 The new meetings are taking place in The Ground:  
 [The Ground](https://theground.se/)  

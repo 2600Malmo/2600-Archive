@@ -1,12 +1,8 @@
 ---
-layout: default
-title: "December 2023"
+layout: month
+month_key: December2023
+month_name: December 2023
+title: December 2023
 ---
 
-## December 2023
-
-An event in the "unplugged mode" - ten to fifteen minutes presentations by community members, no agenda, no recordings. 
-
-## Make a Pull Request if you want your slides to be here!
-
-[back](/)
+An event in the "unplugged mode" - ten to fifteen minutes presentations by community members, no agenda, no recordings.

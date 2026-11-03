@@ -1,16 +1,19 @@
 ---
 layout: default
 ---
-<h2>{{ page.month_name }}</h2>
+<h2>{{ page.month_name | escape }}</h2>
 
 {{ content }}
 
 {% assign month_talks = site.talks | where: "month_key", page.month_key | sort: "date" %}
 {% if month_talks.size == 0 %}
+{% assign month_notes = content | strip %}
+{% if month_notes == empty %}
 <p>We are brewing something cool! Stay tuned</p>
+{% endif %}
 {% else %}
   {% for talk in month_talks %}
-<h3><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a></h3>
+<h3><a href="{{ talk.url | relative_url | escape }}">{{ talk.title | escape }}</a></h3>
 
 {{ talk.content }}
 

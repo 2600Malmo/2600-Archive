@@ -1,12 +1,6 @@
 ---
-layout: default
-title: "February 2026"
+layout: month
+month_key: February2026
+month_name: February 2026
+title: February 2026
 ---
-
-## February 2026
-
-- Nyastrid presented about `Web Application Security: Everything & Nothing Has Changed`.  
-
-## Make a Pull Request if you want your slides to be here!
-
-[back](/)

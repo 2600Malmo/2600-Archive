@@ -1,14 +1,6 @@
 ---
-layout: default
-title: "March 2026"
+layout: month
+month_key: March2026
+month_name: March 2026
+title: March 2026
 ---
-
-## March 2026
-
-- [Jakob](https://www.linkedin.com/in/jakobcarlsson-swe/) presented about the word `Hacker`
-> [Slides](/slides/March2026/Presentation.pdf)
-
-
-## Make a Pull Request if you want your slides to be here!
-
-[back](/)

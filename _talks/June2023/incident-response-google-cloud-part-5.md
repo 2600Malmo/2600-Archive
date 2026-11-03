@@ -1,0 +1,16 @@
+---
+date: 2023-06-01
+month_key: June2023
+month_name: June 2023
+speaker: "@dvirus"
+speaker_url: https://twitter.com/dvirus
+title: Incident Response in Google Cloud - Part 5
+tags:
+- incident-response
+- cloud-security
+- workshop
+---
+[@dvirus](https://twitter.com/dvirus) brings us the `Incedent Response in Google Cloud - Part 5`. This is a practical workshop where you will have a chance to apply everything you have learned so far in a CTF-like environment. 
+
+> Recording:
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vlLOS3VPVIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
