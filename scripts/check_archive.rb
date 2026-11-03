@@ -23,6 +23,15 @@ Dir.mktmpdir("2600-archive-check-") do |destination|
   )
   site = Jekyll::Site.new(config)
   site.process
+  guide = site.pages.find { |page| page.path == "CONTRIBUTING.md" }
+  check(guide && guide.data["layout"] == "default", "Contribution guide must be a themed Jekyll page")
+  guide_html = Nokogiri::HTML(File.read(guide.destination(destination)))
+  check(guide_html.at_css("#main_content h1"), "Contribution guide is missing its themed content")
+  check(!File.exist?(File.join(destination, "CONTRIBUTING.md")), "Raw contribution guide must not be published")
+  homepage = Nokogiri::HTML(File.read(File.join(destination, "index.html")))
+  guide_link = homepage.css("a").find { |anchor| anchor.text == "contribution guide" }
+  check(guide_link && guide_link["href"] == guide.url, "Homepage must link to the rendered contribution guide")
+
   talks = site.collections.fetch("talks").docs
   months = site.pages.select { |page| File.basename(page.path).match?(/\A[A-Z][a-z]+20\d\d\.md\z/) }
   check(!talks.empty?, "No talks found")

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Contributing to the archive
+search_exclude: true
+---
+
 # Contributing to the archive
 
 ## Where to make changes
