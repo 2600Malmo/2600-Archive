@@ -1,12 +1,6 @@
 ---
-layout: default
-title: "October 2025"
+layout: month
+month_key: October2025
+month_name: October 2025
+title: October 2025
 ---
-
-## October 2025
-
-- [Omar Benbouazza](https://www.linkedin.com/in/omarbv/) presented on the topic "Smile, I am hacking you".  
-
-## Make a Pull Request if you want your slides to be here!
-
-[back](/)

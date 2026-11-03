@@ -7,7 +7,7 @@ search_exclude: true
 
 ## Browse talks by tag
 
-{% assign all_talks = site.talks | concat: site.legacy_talks %}
+{% assign all_talks = site.talks %}
 {% assign all_tags = "" | split: "," %}
 {% for talk in all_talks %}
 {% assign all_tags = all_tags | concat: talk.tags %}
@@ -21,9 +21,11 @@ No tagged talks yet.
 ### <a id="{{ tag }}"></a>#{{ tag }}
 
 {% assign tagged = all_talks | where_exp: "t", "t.tags contains tag" | sort: "date" | reverse %}
+<ul>
 {% for talk in tagged %}
-- [{{ talk.title }}]({{ talk.page_url | default: talk.url | relative_url }}) &mdash; {{ talk.month_name }}
+<li><a href="{{ talk.url | relative_url | escape }}">{{ talk.title | escape }}</a> &mdash; {{ talk.month_name | escape }}</li>
 {% endfor %}
+</ul>
 
 {% endfor %}
 {% endif %}

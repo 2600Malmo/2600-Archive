@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p><em>{{ page.month_name }}</em></p>
+<h2>{{ page.title | escape }}</h2>
+<p><em>{{ page.month_name | escape }}</em></p>
 
 {{ content }}
 

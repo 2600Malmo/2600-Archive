@@ -72,6 +72,7 @@
     var matches;
     try {
       matches = index.search(
+        query + " " +
         query
           .split(/\s+/)
           .map(function (term) {

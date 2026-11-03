@@ -2,21 +2,14 @@ remote_theme: pages-themes/hacker@v0.2.0
 plugins:
 - jekyll-remote-theme
 
-# Structured talk entries (one file per talk in _talks/). Each talk is
-# rendered as its own page and also pulled into its month's archive page
-# (see _layouts/month.html) and the site-wide search/browse pages.
-#
-# _legacy_talks/ holds the same kind of entries for historical talks whose
-# month page is still hand-written prose (pre-2026Q3). output: false since
-# Jekyll only supports that flag at the collection level, not per document -
-# these exist purely as searchable/filterable metadata (see search.json,
-# pages/tags.md, pages/speakers.md), they don't get their own page; the
-# "page_url" front matter field points back to the existing month page.
+exclude:
+  - scripts
+
+# All talk descriptions live in _talks/, one file per talk. Month pages
+# and search/browse pages use this collection for every year.
 collections:
   talks:
     output: true
-  legacy_talks:
-    output: false
 
 defaults:
   - scope:
