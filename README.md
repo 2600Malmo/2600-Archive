@@ -16,7 +16,7 @@ Join our socials to get the pass through the gate:
 
 ## Our socials
 
-- [Telegram](https://t.me/+00dNr-O0N08wOGRi) 
+- [Telegram](https://t.me/+H0MBbcTNZfgwMjRi)
 - [Matrix](https://matrix.to/#/#2600malmo:matrix.org)  
 - [Discord](https://discord.gg/btCkZfECGy)
 - [Mastodon](https://mastodon.online/@2600Malmo)
